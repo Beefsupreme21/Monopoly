@@ -2,6 +2,7 @@
 
 use App\Models\Properties;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PropertiesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +15,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home', [
-        'properties' => Properties::all()
-    ]);
-});
+// Show All
+Route::get('/', [PropertiesController::class, 'index']);
+
+// Show Create Form
+Route::get('/create', [PropertiesController::class, 'create']);
+
+// Store Data
+Route::post('/', [PropertiesController::class, 'store']);
+
+// Show Edit Form
+
+// Update Listing
+
+// Delete Listing
+Route::delete('/{property}', [PropertiesController::class, 'destroy']);
+
+
+
+Route::get('/{property}', [PropertiesController::class, 'show']);

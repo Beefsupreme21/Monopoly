@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('properties', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('color');
+            $table->string('color')->default('blue');
             $table->string('cost');
             $table->string('rent');
             $table->string('rentColorSet');
@@ -28,7 +28,9 @@ return new class extends Migration
             $table->string('mortgage');
             $table->string('houseCost');
             $table->string('position');
-            $table->boolean('isUtility');
+            $table->timestamp('updated_at')->nullable();
+            $table->timestamp('created_at')->nullable();
+
         });
     }
 
