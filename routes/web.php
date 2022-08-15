@@ -25,12 +25,14 @@ Route::get('/create', [PropertiesController::class, 'create']);
 Route::post('/', [PropertiesController::class, 'store']);
 
 // Show Edit Form
+Route::get('/{property}/edit', [PropertiesController::class, 'edit']);
 
 // Update Listing
+Route::put('/{property}', [PropertiesController::class, 'update']);
 
 // Delete Listing
 Route::delete('/{property}', [PropertiesController::class, 'destroy']);
 
 
-
+// Single Listing
 Route::get('/{property}', [PropertiesController::class, 'show']);
