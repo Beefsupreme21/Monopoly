@@ -48,6 +48,33 @@ class PropertiesController extends Controller
         return redirect('/')->with('message', 'Created successfully!');
     }
 
+    public function update(Request $request, Properties $property) {
+        $formFields = $request->validate([
+            'name' => 'required',
+            'cost' => 'required',
+            'rent' => 'required',
+            'rentColorSet' => 'required',
+            'rentOneHouse' => 'required',
+            'rentTwoHouse' => 'required',
+            'rentThreeHouse' => 'required',
+            'rentFourHouse' => 'required',
+            'rentHotel' => 'required',
+            'mortgage' => 'required',
+            'houseCost' => 'required',
+            'position' => 'required',
+        ]);
+
+        $property->update($formFields);
+
+
+        return redirect('/')->with('message', 'Updated successfully!');
+    }
+
+    // Show Edit Form
+    public function edit(Properties $property) {
+        return view('edit', ['property' => $property]);
+    }
+
     // Delete Listing
     public function destroy(Properties $property) {
         $property->delete();
