@@ -1,0 +1,7 @@
+id,name,color,cost,rent,rentColorSet,rentOneHouse,rentTwoHouse,rentThreeHouse,rentFourHouse,rentHotel,mortgage,houseCost,position,updated_at,created_at
+1,Illinois Ave.,red,240,20,20,100,300,750,925,1100,120,120,7,2022-08-16 03:11:43,2022-08-14 20:36:15
+2,Park Place,blue,300,35,blue,175,500,1100,1300,1500,175,200,17,2022-08-17 02:19:09,2022-08-16 05:01:07
+3,Pacific Avenue,green,300,26,blue,130,390,900,1100,1275,150,200,23,2022-08-16 05:03:25,2022-08-16 05:02:25
+4,Mediterranean Avenue,purple,60,2,blue,10,30,90,160,250,30,50,1,2022-08-17 00:46:07,2022-08-17 00:46:07
+5,Oriental Avenut,cyan,100,6,blue,30,90,270,400,550,50,50,6,2022-08-17 01:38:42,2022-08-17 01:38:42
+6,New York Avenue,orange,200,16,blue,80,220,600,800,1000,100,100,17,2022-08-17 01:42:01,2022-08-17 01:42:01
