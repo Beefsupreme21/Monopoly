@@ -14,28 +14,27 @@
         />
         <script src="https://cdn.tailwindcss.com"></script>
         <script src="//unpkg.com/alpinejs" defer></script>
-
         <title>Monopoly</title>
     </head>
 
     <main>
         <body>
             <div class="bg-slate-700">
-                <a href="/"><img src="/images/banner.png" class="object-scale-down h-52 w-104 m-auto " alt=""></a>
-                
+                <a href="/"><img src="/images/banner.png" class="object-scale-down h-46 w-96 m-auto p-6" alt=""></a>
+
                 <nav class="flex justify-evenly items-center pb-6">
                     <a href="/"><h1 class="font-bold text-lg text-white hover:underline">Monopoly Properties</h1></a>
-                    <a href="/"><h1 class="font-bold text-lg text-white hover:underline">Chance/Community Chest</h1></a>
+                    <a href="/chance"><h1 class="font-bold text-lg text-white hover:underline">Chance/Community Chest</h1></a>
                     <a href="/"><h1 class="font-bold text-lg text-white hover:underline">Player Pieces</h1></a>
+                    <a href="/create"><h1 class="font-bold text-lg text-white hover:underline">Create new card</h1></a>
+                    <a href="/board"><h1 class="font-bold text-lg text-white hover:underline">Play Now</h1></a>
+
                 </nav>
             </div>
 
-
             {{$slot}}
         
-            <footer class="fixed bottom-0 left-0 w-full flex items-center justify-start font-bold bg-laravel text-white h-24 mt-24 opacity-90 md:justify-center">        
-                <a href="/create" class="absolute top-1/3 right-10 bg-black text-white py-2 px-5">Create Card</a>
-            </footer>
+            <footer></footer>
 
         </body>
     </main>

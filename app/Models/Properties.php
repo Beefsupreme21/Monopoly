@@ -12,6 +12,7 @@ class Properties extends Model
     protected $fillable = [
         'name',
         'cost',
+        'color',
         'rent',
         'rentColorSet',
         'rentOneHouse',

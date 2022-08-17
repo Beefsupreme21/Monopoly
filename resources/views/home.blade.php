@@ -2,7 +2,7 @@
 
     @include('partials._search')
 
-    <div class="flex">
+    <div>
         <x-property-card :properties='$properties' />
     </div>
 </x-layout>

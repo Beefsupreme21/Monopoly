@@ -14,44 +14,28 @@
         />
         <script src="https://cdn.tailwindcss.com"></script>
         <script src="//unpkg.com/alpinejs" defer></script>
-
         <title>Monopoly</title>
     </head>
 
     <main>
         <body>
-            <img src="/images/banner.png" class="object-scale-down h-48 w-96 m-auto" alt="">
-            <nav class="flex justify-evenly items-center mb-4">
-                <a href="/"
-                    ><img class="w-24" src="<?php echo e(asset('images/logo.png')); ?>" alt="" class="logo"
-                /><h1>Monopoly Properties</h1></a>
-                <ul class="flex space-x-6 mr-6 text-lg">
-                    <li>
-                        <a href="register.html" class="hover:text-laravel"><i class="fa-solid fa-user-plus"></i> Register</a>
-                    </li>
-                    <li>
-                        <a href="login.html" class="hover:text-laravel"><i class="fa-solid fa-arrow-right-to-bracket"></i>Login</a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="bg-slate-700">
+                <a href="/"><img src="/images/banner.png" class="object-scale-down h-46 w-96 m-auto p-6" alt=""></a>
 
+                <nav class="flex justify-evenly items-center pb-6">
+                    <a href="/"><h1 class="font-bold text-lg text-white hover:underline">Monopoly Properties</h1></a>
+                    <a href="/chance"><h1 class="font-bold text-lg text-white hover:underline">Chance/Community Chest</h1></a>
+                    <a href="/"><h1 class="font-bold text-lg text-white hover:underline">Player Pieces</h1></a>
+                    <a href="/create"><h1 class="font-bold text-lg text-white hover:underline">Create new card</h1></a>
+                    <a href="/board"><h1 class="font-bold text-lg text-white hover:underline">Play Now</h1></a>
 
+                </nav>
+            </div>
 
-    
             <?php echo e($slot); ?>
 
         
-            <footer
-            class="fixed bottom-0 left-0 w-full flex items-center justify-start font-bold bg-laravel text-white h-24 mt-24 opacity-90 md:justify-center"
-            >
-            <p class="ml-2">Copyright &copy; 2022, All Rights reserved</p>
-        
-            <a
-                href="/listings/create"
-                class="absolute top-1/3 right-10 bg-black text-white py-2 px-5"
-                >Post Job</a
-            >
-            </footer>
+            <footer></footer>
 
         </body>
     </main>

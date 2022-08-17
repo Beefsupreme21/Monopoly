@@ -12,6 +12,7 @@
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="name"
+                    placeholder="Park Place"
                     value="{{old('name')}}"
                 />
 
@@ -26,7 +27,7 @@
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="cost"
-                    placeholder="$300"
+                    placeholder="$350"
                     value="{{old('cost')}}"
                 />
 
@@ -35,32 +36,60 @@
                 @enderror
             </div>
 
+            {{-- <div class="mb-6">
+                <label for="color" class="inline-block text-lg mb-2">Color</label>
+                <input
+                    type="text"
+                    class="border border-gray-200 rounded p-2 w-full"
+                    name="color"
+                    placeholder="blue"
+                    value="{{old('color')}}"
+                />
+
+                @error('color')
+                    <p class="text-red-500 text-xs mt-1">{{$message}}</p>
+                @enderror
+            </div> --}}
+
+            <div>
+                <p class="mb-2">Choose Color</p>
+                <div class="flex justify-evenly">
+                    <div class="mb-6 flex-column">
+                        <input type="radio" id="purple" name="color" value="purple">
+                        <label for="purple">Purple</label><br>
+                        <input type="radio" id="lightBlue" name="color" value="cyan">
+                        <label for="lightBlue">Light Blue</label><br>
+                        <input type="radio" id="pink" name="color" value="pink">
+                        <label for="pink">Pink</label><br>
+                        <input type="radio" id="orange" name="color" value="orange">
+                        <label for="orange">Orange</label><br>
+                    </div>
+        
+                    <div class="mb-6 flex-column">
+                        <input type="radio" id="red" name="color" value="red">
+                        <label for="red">Red</label><br>
+                        <input type="radio" id="yellow" name="color" value="yellow">
+                        <label for="yellow">Yellow</label><br>
+                        <input type="radio" id="green" name="color" value="green">
+                        <label for="green">Green</label><br>
+                        <input type="radio" id="blue" name="color" value="blue">
+                        <label for="blue">Blue</label><br>
+                    </div>
+                </div>
+            </div>
+
+
             <div class="mb-6">
                 <label for="rent" class="inline-block text-lg mb-2">Rent</label>
                 <input
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="rent"
-                    placeholder="$40"
+                    placeholder="$35"
                     value="{{old('rent')}}"
                 />
 
                 @error('rent')
-                    <p class="text-red-500 text-xs mt-1">{{$message}}</p>
-                @enderror
-            </div>
-
-            <div class="mb-6">
-                <label for="rentColorSet" class="inline-block text-lg mb-2">Rent for Color Set</label>
-                <input
-                    type="text"
-                    class="border border-gray-200 rounded p-2 w-full"
-                    name="rentColorSet"
-                    placeholder="$300"
-                    value="{{old('rentColorSet')}}"
-                />
-
-                @error('rentColorSet')
                     <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                 @enderror
             </div>
@@ -71,7 +100,7 @@
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="rentOneHouse"
-                    placeholder="$300"
+                    placeholder="$175"
                     value="{{old('rentOneHouse')}}"
                 />
 
@@ -86,7 +115,7 @@
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="rentTwoHouse"
-                    placeholder="$300"
+                    placeholder="$500"
                     value="{{old('rentTwoHouse')}}"
                 />
 
@@ -101,7 +130,7 @@
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="rentThreeHouse"
-                    placeholder="$300"
+                    placeholder="$1100"
                     value="{{old('rentThreeHouse')}}"
                 />
 
@@ -116,7 +145,7 @@
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="rentFourHouse"
-                    placeholder="$300"
+                    placeholder="$1300"
                     value="{{old('rentFourHouse')}}"
                 />
 
@@ -131,7 +160,7 @@
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="rentHotel"
-                    placeholder="$300"
+                    placeholder="$1500"
                     value="{{old('rentHotel')}}"
                 />
 
@@ -146,7 +175,7 @@
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="mortgage"
-                    placeholder="$300"
+                    placeholder="$175"
                     value="{{old('mortgage')}}"
                 />
 
@@ -156,12 +185,12 @@
             </div>
 
             <div class="mb-6">
-                <label for="houseCost" class="inline-block text-lg mb-2">Mortgage</label>
+                <label for="houseCost" class="inline-block text-lg mb-2">House Cost</label>
                 <input
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="houseCost"
-                    placeholder="$50"
+                    placeholder="$200"
                     value="{{old('houseCost')}}"
                 />
 
@@ -176,7 +205,7 @@
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="position"
-                    placeholder="$50"
+                    placeholder="idk yet"
                     value="{{old('position')}}"
                 />
 
@@ -185,39 +214,8 @@
                 @enderror
             </div>
 
-            {{-- <div class="mb-6 flex-row" >
-                <p>Is this a Property or Utility?</p>
-                <input type="radio">
-                <label>Property</label><br>
-                <input type="radio">
-                <label>Utility</label><br>   --}}
-
-
-                {{-- <label for="position" class="text-lg mb-2">Is this a Property or Utility<br></label>
-
-                <label>Property</label><br>
-                <label>Utility</label><br>  
-                <input type="radio" class="border border-gray-200 rounded p-2 w-full" name="position" value="{{old('position')}}">
-                <input type="radio" id="age2" name="age" value="60"> --}}
-
-                {{-- @error('position')
-                    <p class="text-red-500 text-xs mt-1">{{$message}}</p>
-                @enderror --}}
-            {{-- </div>
-
-            <div>
-                <p>Please select your age:</p>
-                <div class="mb-6 flex flex-row">
-
-                    <input type="radio" value="30"><label class="pr-4 pl2">0 - 30</label><br>
-                    <input type="radio" value="60"><label class="pr-4 pl2">31 - 60</label><br>  
-                    <input type="radio" value="100"><label class="pr-4 pl2">61 - 100</label><br><br>
-                </div>
-            </div> --}}
-
-
             <div class="mb-6">
-                <button class="bg-laravel bg-black text-white rounded py-2 px-4 hover:bg-black">
+                <button class="bg-laravel text-white rounded py-2 px-4 bg-black">
                     Create Card!
                 </button>
 

@@ -16,6 +16,14 @@ class PropertiesController extends Controller
         ]);
     }
 
+    public function indexChance() {
+        return view('chance');
+    }
+
+    public function indexBoard() {
+        return view('board');
+    }
+
     // Show single listing
     public function show(Properties $property) {
         return view('show', [
@@ -31,8 +39,8 @@ class PropertiesController extends Controller
         $formFields = $request->validate([
             'name' => 'required',
             'cost' => 'required',
+            'color' => 'required',
             'rent' => 'required',
-            'rentColorSet' => 'required',
             'rentOneHouse' => 'required',
             'rentTwoHouse' => 'required',
             'rentThreeHouse' => 'required',
@@ -52,8 +60,8 @@ class PropertiesController extends Controller
         $formFields = $request->validate([
             'name' => 'required',
             'cost' => 'required',
+            'color' => 'required',
             'rent' => 'required',
-            'rentColorSet' => 'required',
             'rentOneHouse' => 'required',
             'rentTwoHouse' => 'required',
             'rentThreeHouse' => 'required',

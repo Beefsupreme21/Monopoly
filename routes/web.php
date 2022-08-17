@@ -18,6 +18,12 @@ use App\Http\Controllers\PropertiesController;
 // Show All
 Route::get('/', [PropertiesController::class, 'index']);
 
+// Show Chance
+Route::get('/chance', [PropertiesController::class, 'indexChance']);
+
+// Show Board
+Route::get('/board', [PropertiesController::class, 'indexBoard']);
+
 // Show Create Form
 Route::get('/create', [PropertiesController::class, 'create']);
 
