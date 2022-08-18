@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\Properties;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PropertiesController;
 
@@ -14,31 +13,17 @@ use App\Http\Controllers\PropertiesController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', function(){
+    return view('home');
+});
 
-// Show All
-Route::get('/', [PropertiesController::class, 'index']);
+Route::resources([
+    '/properties' => PropertiesController::class,
+]);
 
-// Show Chance
-Route::get('/chance', [PropertiesController::class, 'indexChance']);
+Route::post('/property-search', function() {
+    return redirect('/properties?searchQuery=' . request('searchQuery'));
+});
 
-// Show Board
-Route::get('/board', [PropertiesController::class, 'indexBoard']);
-
-// Show Create Form
-Route::get('/create', [PropertiesController::class, 'create']);
-
-// Store Data
-Route::post('/', [PropertiesController::class, 'store']);
-
-// Show Edit Form
-Route::get('/{property}/edit', [PropertiesController::class, 'edit']);
-
-// Update Listing
-Route::put('/{property}', [PropertiesController::class, 'update']);
-
-// Delete Listing
-Route::delete('/{property}', [PropertiesController::class, 'destroy']);
-
-
-// Single Listing
-Route::get('/{property}', [PropertiesController::class, 'show']);
+// Route::get('/chance', [PropertiesController::class, 'indexChance']);
+// Route::get('/board', [PropertiesController::class, 'indexBoard']);

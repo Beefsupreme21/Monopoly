@@ -23,12 +23,11 @@
                 <a href="/"><img src="/images/banner.png" class="object-scale-down h-46 w-96 m-auto p-6" alt=""></a>
 
                 <nav class="flex justify-evenly items-center pb-6">
-                    <a href="/"><h1 class="font-bold text-lg text-white hover:underline">Monopoly Properties</h1></a>
-                    <a href="/chance"><h1 class="font-bold text-lg text-white hover:underline">Chance/Community Chest</h1></a>
-                    <a href="/"><h1 class="font-bold text-lg text-white hover:underline">Player Pieces</h1></a>
-                    <a href="/create"><h1 class="font-bold text-lg text-white hover:underline">Create new card</h1></a>
-                    <a href="/board"><h1 class="font-bold text-lg text-white hover:underline">Play Now</h1></a>
-
+                    <a href="<?php echo e(route('properties.index')); ?>"><span class="font-bold text-lg text-white hover:underline">Properties</span></a>
+                    <a href="/chance"><span class="font-bold text-lg text-white hover:underline">Chance</span></a>
+                    <a href="/community-chest"><span class="font-bold text-lg text-white hover:underline">Community Chest</span></a>
+                    <a href="/player-pieces"><span class="font-bold text-lg text-white hover:underline">Player Pieces</span></a>
+                    <a href="/play-now"><span class="font-bold text-lg text-white hover:underline">Play Now</span></a>
                 </nav>
             </div>
 

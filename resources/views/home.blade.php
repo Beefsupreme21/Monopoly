@@ -1,8 +1,5 @@
 <x-layout>
 
-    @include('partials._search')
+    @include('partials.property-search')
 
-    <div>
-        <x-property-card :properties='$properties' />
-    </div>
 </x-layout>

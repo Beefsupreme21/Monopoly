@@ -4,35 +4,27 @@ namespace App\Http\Controllers;
 
 use App\Models\Properties;
 use Illuminate\Http\Request;
-use Illuminate\Validation\Rule;
-use PhpParser\Builder\Property;
 
 class PropertiesController extends Controller
 {
-    // Show all listings
     public function index() {
-        return view('home', [
-            'properties' => Properties::all()
+        $properties = Properties::when(request('searchQuery'), function ($query) {
+            return $query->where('name', 'like', '%' . request('searchQuery') . '%');
+        })->get();
+
+        return view('properties.index', [
+            'properties' => $properties->sortBy('position')
         ]);
     }
 
-    public function indexChance() {
-        return view('chance');
-    }
-
-    public function indexBoard() {
-        return view('board');
-    }
-
-    // Show single listing
     public function show(Properties $property) {
-        return view('show', [
+        return view('properties.show', [
             'property' => $property
         ]);
     }
 
     public function create() {
-        return view('create');
+        return view('properties.create');
     }
 
     public function store(Request $request) {
@@ -78,12 +70,10 @@ class PropertiesController extends Controller
         return redirect('/')->with('message', 'Updated successfully!');
     }
 
-    // Show Edit Form
     public function edit(Properties $property) {
-        return view('edit', ['property' => $property]);
+        return view('properties.edit', ['property' => $property]);
     }
 
-    // Delete Listing
     public function destroy(Properties $property) {
         $property->delete();
         return redirect('/')->with('message', 'Deleted successfully');
