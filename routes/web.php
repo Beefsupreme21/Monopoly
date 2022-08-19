@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ChanceCardController;
 use App\Http\Controllers\PropertiesController;
 
 /*
@@ -19,6 +20,20 @@ Route::get('/', function(){
 
 Route::resources([
     '/properties' => PropertiesController::class,
+]);
+
+// Route::get('/chance', function(){
+//     return view('chanceCard.index', [
+//         'chance' => $chance
+//     ]);
+// });
+
+// return view('chanceCard.index', [
+//     
+// ]);
+
+Route::resources([
+    '/chance' => ChanceCardController::class,
 ]);
 
 Route::post('/property-search', function() {

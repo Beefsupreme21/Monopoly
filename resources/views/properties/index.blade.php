@@ -1,5 +1,4 @@
 <x-layout>
-
     @include('partials.property-search')
 
     <div class="flex flex-wrap">
