@@ -4,8 +4,38 @@
             <h2 class="text-2xl font-bold uppercase mb-1">Add a new Property</h2>
         </header>
 
-        <form method="POST" action="/" enctype="multipart/form-data">
+        <form method="POST" action="/properties" enctype="multipart/form-data">
             @csrf
+            <div class="mb-6">
+                <label for="version" class="text-lg mb-1">Version</label>
+                <input
+                    type="text"
+                    class="border border-gray-200 rounded p-2 w-full"
+                    name="version"
+                    placeholder="Park Place"
+                    value="{{old('version')}}"
+                />
+
+                @error('version')
+                    <p class="text-red-500 text-xs mt-1">{{$message}}</p>
+                @enderror
+            </div>
+
+            <div class="mb-6">
+                <label for="type" class="inline-block text-lg mb-1">Type</label>
+                <input
+                    type="text"
+                    class="border border-gray-200 rounded p-2 w-full"
+                    name="type"
+                    placeholder="Park Place"
+                    value="{{old('type')}}"
+                />
+
+                @error('type')
+                    <p class="text-red-500 text-xs mt-1">{{$message}}</p>
+                @enderror
+            </div>
+
             <div class="mb-6">
                 <label for="name" class="inline-block text-lg mb-1">Name</label>
                 <input
@@ -67,6 +97,9 @@
                         <label for="blue">Blue</label><br>
                     </div>
                 </div>
+                @error('color')
+                    <p class="text-red-500 text-xs mt-1">{{$message}}</p>
+                @enderror
             </div>
 
 

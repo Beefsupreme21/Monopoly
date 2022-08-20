@@ -18,6 +18,7 @@ Route::get('/', function(){
     return view('home');
 });
 
+
 Route::resources([
     '/properties' => PropertiesController::class,
 ]);

@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('chance_cards', function (Blueprint $table) {
             $table->id();
             $table->string('message');
+            $table->string('image');
             $table->string('amount');
             $table->string('canHold');
             $table->string('goToProperty');

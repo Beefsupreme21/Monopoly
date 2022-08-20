@@ -23,7 +23,9 @@
                 <div class="flex justify-between">
                     <a href="/play-now"><span class="bg-green-500 align-middle font-bold text-lg text-white p-6 rounded-lg border-black-2 hover:underline">Play Now</span></a>
                     <a href="/"><img src="/images/banner.png" class="object-scale-down h-46 w-96 m-auto p-6" alt=""></a>
-                    <a href="/properties/create"><span class="font-bold text-lg text-white hover:underline">Create new piece</span></a>
+                    <a href="{{ route('chance.create') }}"><span class="font-bold text-lg text-white hover:underline">Create new Chance Card</span></a>
+                    <a href="/properties/create"><span class="font-bold text-lg text-white hover:underline">Create new prop</span></a>
+
                 </div>
 
 

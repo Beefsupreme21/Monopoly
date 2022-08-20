@@ -11,6 +11,7 @@ class ChanceCard extends Model
 
     protected $fillable = [
         'message',
+        'image',
         'amount',
         'canHold',
         'goToProperty',

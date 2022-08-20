@@ -12,8 +12,52 @@
             <h2 class="text-2xl font-bold uppercase mb-1">Add a new Property</h2>
         </header>
 
-        <form method="POST" action="/" enctype="multipart/form-data">
+        <form method="POST" action="/properties" enctype="multipart/form-data">
             <?php echo csrf_field(); ?>
+            <div class="mb-6">
+                <label for="version" class="text-lg mb-1">Version</label>
+                <input
+                    type="text"
+                    class="border border-gray-200 rounded p-2 w-full"
+                    name="version"
+                    placeholder="Park Place"
+                    value="<?php echo e(old('version')); ?>"
+                />
+
+                <?php $__errorArgs = ['version'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?>
+                    <p class="text-red-500 text-xs mt-1"><?php echo e($message); ?></p>
+                <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>
+            </div>
+
+            <div class="mb-6">
+                <label for="type" class="inline-block text-lg mb-1">Type</label>
+                <input
+                    type="text"
+                    class="border border-gray-200 rounded p-2 w-full"
+                    name="type"
+                    placeholder="Park Place"
+                    value="<?php echo e(old('type')); ?>"
+                />
+
+                <?php $__errorArgs = ['type'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?>
+                    <p class="text-red-500 text-xs mt-1"><?php echo e($message); ?></p>
+                <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>
+            </div>
+
             <div class="mb-6">
                 <label for="name" class="inline-block text-lg mb-1">Name</label>
                 <input
@@ -89,6 +133,16 @@ unset($__errorArgs, $__bag); ?>
                         <label for="blue">Blue</label><br>
                     </div>
                 </div>
+                <?php $__errorArgs = ['color'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?>
+                    <p class="text-red-500 text-xs mt-1"><?php echo e($message); ?></p>
+                <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>
             </div>
 
 

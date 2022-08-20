@@ -12,9 +12,53 @@
             <h2 class="text-2xl font-bold uppercase mb-1">Edit Property</h2>
         </header>
 
-        <form method="POST" action="/<?php echo e($property->id); ?>" enctype="multipart/form-data">
+        <form method="POST" action="/properties/<?php echo e($property->id); ?>" enctype="multipart/form-data">
             <?php echo csrf_field(); ?>
             <?php echo method_field('PUT'); ?>
+            <div class="mb-6">
+                <label for="version" class="text-lg mb-1">Version</label>
+                <input
+                    type="text"
+                    class="border border-gray-200 rounded p-2 w-full"
+                    name="version"
+                    placeholder="Park Place"
+                    value="<?php echo e(old('version')); ?>"
+                />
+
+                <?php $__errorArgs = ['version'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?>
+                    <p class="text-red-500 text-xs mt-1"><?php echo e($message); ?></p>
+                <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>
+            </div>
+
+            <div class="mb-6">
+                <label for="type" class="inline-block text-lg mb-1">Type</label>
+                <input
+                    type="text"
+                    class="border border-gray-200 rounded p-2 w-full"
+                    name="type"
+                    placeholder="Park Place"
+                    value="<?php echo e(old('type')); ?>"
+                />
+
+                <?php $__errorArgs = ['type'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?>
+                    <p class="text-red-500 text-xs mt-1"><?php echo e($message); ?></p>
+                <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>
+            </div>
+            
             <div class="mb-6">
                 <label for="name" class="inline-block text-lg mb-1">Name</label>
                 <input
@@ -58,8 +102,6 @@ endif;
 unset($__errorArgs, $__bag); ?>
             </div>
 
-            
-
             <div>
                 <p class="mb-2">Choose Color</p>
                 <div class="flex justify-evenly">
@@ -85,6 +127,16 @@ unset($__errorArgs, $__bag); ?>
                         <label for="blue">Blue</label><br>
                     </div>
                 </div>
+                <?php $__errorArgs = ['color'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?>
+                    <p class="text-red-500 text-xs mt-1"><?php echo e($message); ?></p>
+                <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>
             </div>
 
             <div class="mb-6">
@@ -287,7 +339,7 @@ unset($__errorArgs, $__bag); ?>
             </div>
 
             <div class="mb-6">
-                <button class="bg-laravel bg-black text-white rounded py-2 px-4 hover:bg-black">
+                <button class="bg-laravel bg-black text-white rounded py-2 px-4 hover:bg-green">
                     Update Card
                 </button>
 

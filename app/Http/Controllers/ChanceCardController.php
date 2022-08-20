@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\ChanceCard;
+use Illuminate\Http\Request;
 use App\Http\Requests\StoreChanceCardRequest;
 use App\Http\Requests\UpdateChanceCardRequest;
 
@@ -27,8 +28,9 @@ class ChanceCardController extends Controller
      */
     public function create()
     {
-        //
+        return view('chanceCard.create');
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -36,9 +38,23 @@ class ChanceCardController extends Controller
      * @param  \App\Http\Requests\StoreChanceCardRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreChanceCardRequest $request)
-    {
-        //
+
+
+    public function store(Request $request) {
+        $formFields = $request->validate([
+            'message' => 'required',
+            'amount' => 'required',
+            'canHold' => 'required',
+            'goToProperty' => 'required',
+        ]);
+
+        if($request->hasFile('image')) {
+            $formFields['image'] = $request->file('image')->store('images', 'public');
+        }
+
+        ChanceCard::create($formFields);
+
+        return redirect('/')->with('message', 'Created successfully!');
     }
 
     /**

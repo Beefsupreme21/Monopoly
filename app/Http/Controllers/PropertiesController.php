@@ -30,6 +30,8 @@ class PropertiesController extends Controller
 
     public function store(Request $request) {
         $formFields = $request->validate([
+            'version' => 'required',
+            'type' => 'required',
             'name' => 'required',
             'cost' => 'required',
             'color' => 'required',
@@ -51,6 +53,8 @@ class PropertiesController extends Controller
 
     public function update(Request $request, Properties $property) {
         $formFields = $request->validate([
+            'version' => 'required',
+            'type' => 'required',
             'name' => 'required',
             'cost' => 'required',
             'color' => 'required',
