@@ -36,21 +36,6 @@
                 @enderror
             </div>
 
-            {{-- <div class="mb-6">
-                <label for="color" class="inline-block text-lg mb-2">Color</label>
-                <input
-                    type="text"
-                    class="border border-gray-200 rounded p-2 w-full"
-                    name="color"
-                    placeholder="blue"
-                    value="{{old('color')}}"
-                />
-
-                @error('color')
-                    <p class="text-red-500 text-xs mt-1">{{$message}}</p>
-                @enderror
-            </div> --}}
-
             <div>
                 <p class="mb-2">Choose Color</p>
                 <div class="flex justify-evenly">
