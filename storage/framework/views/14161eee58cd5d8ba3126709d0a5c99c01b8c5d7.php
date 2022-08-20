@@ -58,18 +58,19 @@ endif;
 unset($__errorArgs, $__bag); ?>
             </div>
 
-            
-
             <div>
                 <p class="mb-2">Choose Color</p>
                 <div class="flex justify-evenly">
                     <div class="mb-6 flex-column">
                         <input type="radio" id="purple" name="color" value="purple">
                         <label for="purple">Purple</label><br>
+
                         <input type="radio" id="lightBlue" name="color" value="cyan">
                         <label for="lightBlue">Light Blue</label><br>
+
                         <input type="radio" id="pink" name="color" value="pink">
                         <label for="pink">Pink</label><br>
+
                         <input type="radio" id="orange" name="color" value="orange">
                         <label for="orange">Orange</label><br>
                     </div>
@@ -77,10 +78,13 @@ unset($__errorArgs, $__bag); ?>
                     <div class="mb-6 flex-column">
                         <input type="radio" id="red" name="color" value="red">
                         <label for="red">Red</label><br>
+
                         <input type="radio" id="yellow" name="color" value="yellow">
                         <label for="yellow">Yellow</label><br>
+
                         <input type="radio" id="green" name="color" value="green">
                         <label for="green">Green</label><br>
+
                         <input type="radio" id="blue" name="color" value="blue">
                         <label for="blue">Blue</label><br>
                     </div>
