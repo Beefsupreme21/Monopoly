@@ -22,16 +22,6 @@ Route::resources([
     '/properties' => PropertiesController::class,
 ]);
 
-// Route::get('/chance', function(){
-//     return view('chanceCard.index', [
-//         'chance' => $chance
-//     ]);
-// });
-
-// return view('chanceCard.index', [
-//     
-// ]);
-
 Route::resources([
     '/chance' => ChanceCardController::class,
 ]);
@@ -39,6 +29,3 @@ Route::resources([
 Route::post('/property-search', function() {
     return redirect('/properties?searchQuery=' . request('searchQuery'));
 });
-
-// Route::get('/chance', [PropertiesController::class, 'indexChance']);
-// Route::get('/board', [PropertiesController::class, 'indexBoard']);
