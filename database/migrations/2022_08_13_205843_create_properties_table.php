@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('color');
             $table->string('cost');
             $table->string('rent');
-            $table->string('rentColorSet');
+            $table->string('rentColorSet')->nullable();
             $table->string('rentOneHouse');
             $table->string('rentTwoHouse');
             $table->string('rentThreeHouse');

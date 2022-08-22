@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('chance_cards', function (Blueprint $table) {
+        Schema::create('community_chests', function (Blueprint $table) {
             $table->id();
             $table->string('version')->nullable();
             $table->string('message')->nullable();
             $table->string('image');
-            $table->string('amount');
+            $table->string('amount')->nullable();
             $table->string('canHold');
             $table->string('goToProperty')->nullable();
             $table->timestamps();
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('chance_cards');
+        Schema::dropIfExists('community_chests');
     }
 };

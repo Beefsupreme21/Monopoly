@@ -10,7 +10,7 @@ class PropertiesController extends Controller
     public function index() {
         $properties = Properties::when(request('searchQuery'), function ($query) {
             return $query->where('name', 'like', '%' . request('searchQuery') . '%')
-            ->orWhere('color', 'like', '%' . request('searchQuery') . '%');;
+            ->orWhere('color', 'like', '%' . request('searchQuery') . '%');
         })->get();
 
         return view('properties.index', [
@@ -18,7 +18,9 @@ class PropertiesController extends Controller
         ]);
     }
 
-    public function show(Properties $property) {
+    public function show($id) {
+        $property = Properties::findOrFail($id);
+
         return view('properties.show', [
             'property' => $property
         ]);

@@ -13,14 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('chance_cards', function (Blueprint $table) {
-            $table->id();
-            $table->string('version')->nullable();
-            $table->string('message')->nullable();
+        Schema::create('player_pieces', function (Blueprint $table) {
+            $table->string('name');
             $table->string('image');
-            $table->string('amount');
-            $table->string('canHold');
-            $table->string('goToProperty')->nullable();
+            $table->id();
             $table->timestamps();
         });
     }
@@ -32,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('chance_cards');
+        Schema::dropIfExists('player_pieces');
     }
 };

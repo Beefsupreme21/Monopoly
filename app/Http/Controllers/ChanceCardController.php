@@ -9,43 +9,34 @@ use App\Http\Requests\UpdateChanceCardRequest;
 
 class ChanceCardController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index(ChanceCard $chanceCards)
-    {
+    public function index() {
+        $chanceCards = ChanceCard::all();
+
         return view('chanceCard.index', [
-            'chanceCards' => $chanceCards->all()
+            'chanceCards' => $chanceCards
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
+    public function show($id) {   
+        $chanceCard = ChanceCard::findOrFail($id);
+    
+        return view('chanceCard.show', [
+            'chanceCard' => $chanceCard
+        ]);
+    }
+
+    public function create() {
         return view('chanceCard.create');
     }
 
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreChanceCardRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-
-
     public function store(Request $request) {
         $formFields = $request->validate([
-            'message' => 'required',
-            'amount' => 'required',
+            'version' => 'required',
+            'image' => 'required',
+            'message',
+            'amount',
             'canHold' => 'required',
-            'goToProperty' => 'required',
+            'goToProperty',
         ]);
 
         if($request->hasFile('image')) {
@@ -57,46 +48,35 @@ class ChanceCardController extends Controller
         return redirect('/')->with('message', 'Created successfully!');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\ChanceCard  $chanceCard
-     * @return \Illuminate\Http\Response
-     */
-    public function show(ChanceCard $chanceCard)
+    public function update(Request $request, ChanceCard $chanceCard)
     {
-        //
+        $formFields = $request->validate([
+            'version' => 'required',
+            'image',
+            'message',
+            'amount',
+            'canHold' => 'required',
+            'goToProperty',
+        ]);
+
+        $chanceCard->update($formFields);
+
+        return redirect('/')->with('message', 'Updated successfully!');
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\ChanceCard  $chanceCard
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(ChanceCard $chanceCard)
+
+    public function edit($id)
     {
-        //
+        $chanceCard = ChanceCard::findOrFail($id);
+
+        return view('chanceCard.edit', [
+            'chanceCard' => $chanceCard
+        ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateChanceCardRequest  $request
-     * @param  \App\Models\ChanceCard  $chanceCard
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdateChanceCardRequest $request, ChanceCard $chanceCard)
-    {
-        //
-    }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\ChanceCard  $chanceCard
-     * @return \Illuminate\Http\Response
-     */
+
+
     public function destroy(ChanceCard $chanceCard)
     {
         //
