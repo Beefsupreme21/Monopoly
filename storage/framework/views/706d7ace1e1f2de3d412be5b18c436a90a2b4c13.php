@@ -9,7 +9,8 @@
 <?php $component->withAttributes([]); ?>
     <div class="flex flex-wrap">
         <?php $__currentLoopData = $chanceCards; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $chanceCard): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+            <a href="<?php echo e(route('chance.show', ['chance' => $chanceCard->id])); ?>">
+                <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.chance-card','data' => ['chanceCard' => $chanceCard]] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('chance-card'); ?>
 <?php if ($component->shouldRender()): ?>
@@ -24,6 +25,7 @@
 <?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>   
+            </a>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </div>
  <?php echo $__env->renderComponent(); ?>

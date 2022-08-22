@@ -15,34 +15,20 @@
         <form method="POST" action="/chance" enctype="multipart/form-data">
             <?php echo csrf_field(); ?>
             <div class="mb-6">
-                <p class="text-lg mb-1">Type of Monopoly Game</p>
+                <p class="text-lg mb-1">Version of Monopoly</p>
                 <div>
                     <div class="mb-6 flex justify-start">
                         <div>
-                            <input type="radio" id="original" name="type" value="original">
+                            <input type="radio" id="original" name="version" value="original" checked="checked">
                             <label for="original">Original</label><br>
                         </div>
                         <div class="ml-4">
-                            <input type="radio" id="nflopoly" name="type" value="nflopoly">
+                            <input type="radio" id="nflopoly" name="version" value="nflopoly">
                             <label for="nflopoly">NFL-Opoly</label><br>
                         </div>
-
-
                     </div>
                 </div>
-            </div>
-
-            <div class="mb-6">
-                <label for="message" class="inline-block text-lg mb-1">Message</label>
-                <input
-                    type="text"
-                    class="border border-gray-200 rounded p-2 w-full"
-                    name="message"
-                    placeholder="Park Place"
-                    value="<?php echo e(old('type')); ?>"
-                />
-
-                <?php $__errorArgs = ['message'];
+                <?php $__errorArgs = ['version'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
@@ -75,13 +61,15 @@ unset($__errorArgs, $__bag); ?>
             </div>
 
 
+
+
             <div class="mb-6">
-                <label for="amount" class="inline-block text-lg mb-2">Amount</label>
+                <label for="amount" class="inline-block text-lg mb-2">Amount - or +</label>
                 <input
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="amount"
-                    placeholder="$350"
+                    placeholder="$50 or -$75"
                     value="<?php echo e(old('amount')); ?>"
                 />
 
@@ -101,11 +89,11 @@ unset($__errorArgs, $__bag); ?>
                 <p class="mb-2">Can you hold?</p>
                 <div class="flex">
                     <div class="mb-6 flex-column">
-                        <input type="radio" id="purple" name="canHold" value="purple">
-                        <label for="purple">True</label><br>
+                        <input type="radio" id="canHold" name="canHold" value="true">
+                        <label for="canHold">True</label><br>
 
-                        <input type="radio" id="lightBlue" name="canHold" value="cyan">
-                        <label for="lightBlue">False</label><br>
+                        <input type="radio" id="cantHold" name="canHold" value="false" checked="checked">
+                        <label for="cantHold">False</label><br>
                     </div>
                 </div>
                 <?php $__errorArgs = ['canHold'];
@@ -122,7 +110,7 @@ unset($__errorArgs, $__bag); ?>
 
 
             <div class="mb-6">
-                <label for="goToProperty" class="inline-block text-lg mb-2">Go to Property</label>
+                <label for="goToProperty" class="inline-block text-lg mb-2">Does this card bring you to a property?</label>
                 <input
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"

@@ -14,10 +14,13 @@ use App\Http\Controllers\PropertiesController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
+
+
 Route::get('/', function(){
     return view('home');
 });
-
 
 Route::resources([
     '/properties' => PropertiesController::class,
@@ -25,6 +28,14 @@ Route::resources([
 
 Route::resources([
     '/chance' => ChanceCardController::class,
+]);
+
+Route::resources([
+    '/communityChest' => CommunityChestController::class,
+]);
+
+Route::resources([
+    '/player-pieces' => PlayerPiecesController::class,
 ]);
 
 Route::post('/property-search', function() {

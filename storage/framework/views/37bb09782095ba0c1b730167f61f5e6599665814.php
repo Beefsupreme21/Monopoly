@@ -11,7 +11,8 @@
 
     <div class="flex flex-wrap">
         <?php $__currentLoopData = $properties; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $property): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+            <a href="<?php echo e(route('properties.show', ['property' => $property->id])); ?>">
+                <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.property-card','data' => ['property' => $property]] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('property-card'); ?>
 <?php if ($component->shouldRender()): ?>
@@ -26,6 +27,7 @@
 <?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>   
+            </a>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </div>
  <?php echo $__env->renderComponent(); ?>

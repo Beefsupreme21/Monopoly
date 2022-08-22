@@ -11,12 +11,10 @@
 } ?>
 <?php unset($__defined_vars); ?>
 
-<a href="#">
-    <div class="border border-gray-200 rounded p-6">
-        <div class="border-2 border-black">
-            <img src="<?php echo e(asset('storage/' . $chanceCard->image)); ?>" alt="">
-        </div>
-    </div>
-</a>
 
+<div class="border border-gray-200 rounded p-6">
+    <div class="border-2 border-black">
+        <img src="<?php echo e(asset('storage/' . $chanceCard->image)); ?>" alt="">
+    </div>
+</div>
 <?php /**PATH C:\xampp\Projects\Monopoly\resources\views/components/chance-card.blade.php ENDPATH**/ ?>
