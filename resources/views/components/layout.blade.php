@@ -20,21 +20,22 @@
     <main>
         <body>
             <div class="bg-slate-700">
-                <div class="flex justify-between">
-                    <a href="/play-now"><span class="bg-green-500 align-middle font-bold text-lg text-white p-6 rounded-lg border-black-2 hover:underline">Play Now</span></a>
+                <div class="flex justify-center">
                     <a href="/"><img src="/images/banner.png" class="object-scale-down h-46 w-96 m-auto p-6" alt=""></a>
-                    <a href="{{ route('chance.create') }}"><span class="font-bold text-lg text-white hover:underline">Create new Chance Card</span></a>
-                    <a href="{{ route('properties.create') }}"><span class="font-bold text-lg text-white hover:underline">Create new prop</span></a>
-
                 </div>
 
+                <nav class="flex justify-between pb-8">
+                    <div>
+                        <a href="{{ route('properties.index') }}"><span class="font-bold text-lg text-white m-6 hover:underline">Properties</span></a>
+                        <a href="{{ route('chance.index') }}"><span class="font-bold text-lg text-white m-6 hover:underline">Chance</span></a>
+                        <a href="{{ route('communityChest.index') }}"><span class="font-bold text-lg text-white m-6 hover:underline">Community Chest</span></a>
+                    </div>
 
-                <nav class="flex justify-evenly items-center pb-6">
-                    <a href="{{ route('properties.index') }}"><span class="font-bold text-lg text-white hover:underline">Properties</span></a>
-                    <a href="{{ route('chance.index') }}"><span class="font-bold text-lg text-white hover:underline">Chance</span></a>
-                    <a href="{{ route('communityChest.index') }}"><span class="font-bold text-lg text-white hover:underline">Community Chest</span></a>
-                    <a href="/player-pieces"><span class="font-bold text-lg text-white hover:underline">Player Pieces</span></a>
-
+                    <div class="justify-self-end">
+                        <a href="{{ route('chance.create') }}"><span class="font-bold text-lg text-white m-6 hover:underline">Create new Chance Card</span></a>
+                        <a href="{{ route('properties.create') }}"><span class="font-bold text-lg text-white m-6 hover:underline">Create new prop</span></a>
+                        <a href="#"><span class="bg-green-500 font-bold text-lg text-white px-5 py-3 rounded-full border-black-4 m-6 hover:underline">Play Now</span></a>    
+                    </div>
                 </nav>
             </div>
 
