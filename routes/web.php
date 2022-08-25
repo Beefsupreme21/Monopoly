@@ -22,6 +22,10 @@ Route::get('/', function(){
     return view('home');
 });
 
+Route::get('/create', function(){
+    return view('create');
+});
+
 Route::resources([
     '/properties' => PropertiesController::class,
 ]);

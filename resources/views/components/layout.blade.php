@@ -21,27 +21,29 @@
         <body>
             <div class="bg-slate-700">
                 <div class="flex justify-center">
-                    <a href="/"><img src="/images/banner.png" class="object-scale-down h-46 w-96 m-auto p-6" alt=""></a>
+                    <a href="/"><img src="/images/banner.png" class="object-scale-down h-46 w-96 m-auto p-0" alt=""></a>
                 </div>
 
-                <nav class="flex justify-between pb-8">
-                    <div>
+                <nav class="flex justify-between pb-4">
+                    <div class="flex flex-col md:flex-row">
                         <a href="{{ route('properties.index') }}"><span class="font-bold text-lg text-white m-6 hover:underline">Properties</span></a>
                         <a href="{{ route('chance.index') }}"><span class="font-bold text-lg text-white m-6 hover:underline">Chance</span></a>
                         <a href="{{ route('communityChest.index') }}"><span class="font-bold text-lg text-white m-6 hover:underline">Community Chest</span></a>
                     </div>
 
-                    <div class="justify-self-end">
-                        <a href="{{ route('chance.create') }}"><span class="font-bold text-lg text-white m-6 hover:underline">Create new Chance Card</span></a>
-                        <a href="{{ route('properties.create') }}"><span class="font-bold text-lg text-white m-6 hover:underline">Create new prop</span></a>
-                        <a href="#"><span class="bg-green-500 font-bold text-lg text-white px-5 py-3 rounded-full border-black-4 m-6 hover:underline">Play Now</span></a>    
+                    <div class="flex flex-col justify-around md:flex-row items-end">
+                        <a href="/create"><span class="bg-amber-700 hover:bg-blue-700 text-white font-bold my-2 mx-4 py-2 px-4 rounded-full hover:underline">Create new piece</span></a>
+                        <a href="#"><span class="bg-blue-500 hover:bg-blue-700 self-end text-white font-bold mx-4 py-2 px-4 rounded-full hover:underline">Play Now!</span></a>    
                     </div>
                 </nav>
             </div>
 
             {{$slot}}
         
-            <footer></footer>
+            <footer>
+                <div class="bg-slate-700">
+                    <p>Here is the footer</p>
+            </footer>
 
         </body>
     </main>
