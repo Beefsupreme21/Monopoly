@@ -27,6 +27,8 @@
                 <nav class="flex justify-between pb-4">
                     <div class="flex flex-col md:flex-row">
                         <a href="{{ route('properties.index') }}"><span class="font-bold text-lg text-white m-6 hover:underline">Properties</span></a>
+                        <a href="{{ route('properties.create') }}"><span class="font-bold text-lg text-white m-6 hover:underline">Create Properties</span></a>
+
                         <a href="{{ route('chance.index') }}"><span class="font-bold text-lg text-white m-6 hover:underline">Chance</span></a>
                         <a href="{{ route('communityChest.index') }}"><span class="font-bold text-lg text-white m-6 hover:underline">Community Chest</span></a>
                     </div>

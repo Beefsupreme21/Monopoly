@@ -2,4 +2,6 @@
 
     @include('partials.property-search')
 
+
+
 </x-layout>

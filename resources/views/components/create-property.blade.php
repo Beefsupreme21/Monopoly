@@ -20,10 +20,21 @@
             @enderror
         </div>
 
+        <div>
+            <input 
+                type="text" 
+                x-model="search"
+                class="border border-gray-200 rounded p-2 w-full"
+                name="test"
+                placeholder="Something.."
+            >    
+        </div>
+
         <div class="mb-6">
             <label for="type" class="inline-block text-lg mb-1">Type</label>
             <input
                 type="text"
+                x-model="test"
                 class="border border-gray-200 rounded p-2 w-full"
                 name="type"
                 placeholder="Park Place"
@@ -237,4 +248,5 @@
             @enderror
         </div>
     </form>
+
 </div>
