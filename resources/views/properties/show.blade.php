@@ -1,11 +1,5 @@
 <x-layout>
 
-    <style>
-        .test {
-            background-color: rgb(205, 230, 208);
-        }
-    </style>
-
     <a href="/" class="inline-block text-black ml-4 mb-4"
     ><i class="fa-solid fa-arrow-left"></i> Back
     </a>

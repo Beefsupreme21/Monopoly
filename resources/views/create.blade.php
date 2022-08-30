@@ -1,25 +1,23 @@
 <x-layout>
-    <div class="flex" x-data="{ search: '', test: '', property: true, chance:false, communityChest:false }">
-        <div class="bg-gray-50 border border-gray-200 p-10 rounded max-w-lg mx-auto mt-24">
-            <header class="text-center">
-                <h2 class="text-2xl font-bold uppercase mb-1">Add a new Piece</h2>
-            </header>
-    
-    
-    
-            <form method="POST" action="/properties" enctype="multipart/form-data">
-                @csrf
-                <div class="mb-4">
-                    <p class="text-lg mb-1">Choose Type</p>
-                    <div class="p-4">
-                        <div>
+    <div class="flex justify-center" x-data="{ name: '', cost: '', rent: '', rentOneHouse: '', rentTwoHouse: '', rentThreeHouse: '', rentFourHouse: '', rentHotel: '', mortgage: '', houseCost: '', property: true, chance:false, communityChest:false }">
+        <div class="md:flex">
+            <div class="bg-gray-50 border border-gray-200 p-8 rounded mt-24 min-w-476">
+                <header class="text-center">
+                    <h2 class="text-2xl font-bold uppercase mb-1">Add a new Piece</h2>
+                </header>
+        
+                <form method="POST" action="/properties" enctype="multipart/form-data">
+                    @csrf
+                    <div class="mb-4 ">
+                        <p class="text-lg mb-1">Choose Type</p>
+                        <div class="p-4">
                             <div class="mb-4">
                                 <input 
                                     x-on:click="property = true, chance = false, communityChest = false" 
-                                    type="radio" 
-                                    id="property" 
-                                    name="type" 
-                                    value="property" 
+                                    type="radio"
+                                    id="property"
+                                    name="type"
+                                    value="property"
                                     checked="checked">
                                 <label for="property">Property</label><br>
     
@@ -52,31 +50,33 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="mb-6">
+                            <button class="bg-laravel text-white rounded py-2 px-4 bg-black">
+                                Create Card!
+                            </button>
+            
+                            <a href="/" class="text-black ml-4"> Back </a>
+                        </div>
                     </div>
-                    <div class="mb-6">
-                        <button class="bg-laravel text-white rounded py-2 px-4 bg-black">
-                            Create Card!
-                        </button>
-        
-                        <a href="/" class="text-black ml-4"> Back </a>
-                    </div>
+                </form>
+            </div>
+    
+            <div class="px-6 rounded max-w-lg mx-auto mt-24 relative">
+                <div class="sticky top-5" x-show="property" x-cloak>
+                    <x-property-card-preview />   
+                    <x-property-board-preview />   
                 </div>
-            </form>
+        
+                <div x-show="chance" x-cloak>
+                    <img src="{{asset('images/Advance_To_Boardwalk.webp')}}">
+                </div>
+        
+                <div x-show="communityChest" x-cloak>
+                    <img src="{{asset('images/Advance_To_Boardwalk.webp')}}">
+                </div>
+            </div>
         </div>
 
-        <div class="bg-gray-50 border border-gray-200 p-10 rounded max-w-lg mx-auto mt-24">
-            <div x-show="property" x-cloak>
-                <x-property-card-preview />   
-            </div>
-    
-            <div x-show="chance" x-cloak>
-                <img src="{{asset('images/Advance_To_Boardwalk.webp')}}">
-            </div>
-    
-            <div x-show="communityChest" x-cloak>
-                <img src="{{asset('images/Advance_To_Boardwalk.webp')}}">
-            </div>
-        </div>
 
     </div>
 

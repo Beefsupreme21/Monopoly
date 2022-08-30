@@ -1,6 +1,6 @@
 @props(['property'])
 
-<div class="ml-24 border-2 border-black w-[160px] h-[260px] test relative ">
+<div class="ml-24 border-2 board-color border-black w-[160px] h-[260px] relative ">
     <div class="border-b-2 border-black bg-{{$property->color}}-600 text-center text-white h-[45px]"></div>
     <div class="flex-col justify-between text-center items-center">
         <div class="pt-4">

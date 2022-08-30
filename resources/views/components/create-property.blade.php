@@ -19,7 +19,7 @@
                 <p class="text-red-500 text-xs mt-1">{{$message}}</p>
             @enderror
         </div>
-
+{{-- 
         <div>
             <input 
                 type="text" 
@@ -28,23 +28,9 @@
                 name="test"
                 placeholder="Something.."
             >    
-        </div>
+        </div> --}}
 
-        <div class="mb-6">
-            <label for="type" class="inline-block text-lg mb-1">Type</label>
-            <input
-                type="text"
-                x-model="test"
-                class="border border-gray-200 rounded p-2 w-full"
-                name="type"
-                placeholder="Park Place"
-                value="{{old('type')}}"
-            />
 
-            @error('type')
-                <p class="text-red-500 text-xs mt-1">{{$message}}</p>
-            @enderror
-        </div>
 
         <div class="mb-6">
             <label for="name" class="inline-block text-lg mb-1">Name</label>
@@ -52,6 +38,7 @@
                 type="text"
                 class="border border-gray-200 rounded p-2 w-full"
                 name="name"
+                x-model="name"
                 placeholder="Park Place"
                 value="{{old('name')}}"
             />
@@ -67,8 +54,9 @@
                 type="text"
                 class="border border-gray-200 rounded p-2 w-full"
                 name="cost"
+                x-model="cost"
                 placeholder="$350"
-                value="{{old('cost')}}"
+                value=""
             />
 
             @error('cost')
@@ -119,8 +107,9 @@
                 type="text"
                 class="border border-gray-200 rounded p-2 w-full"
                 name="rent"
+                x-model="rent"
                 placeholder="$35"
-                value="{{old('rent')}}"
+                value=""
             />
 
             @error('rent')
@@ -134,6 +123,8 @@
                 type="text"
                 class="border border-gray-200 rounded p-2 w-full"
                 name="rentOneHouse"
+                x-model="rentOneHouse"
+
                 placeholder="$175"
                 value="{{old('rentOneHouse')}}"
             />
@@ -149,6 +140,8 @@
                 type="text"
                 class="border border-gray-200 rounded p-2 w-full"
                 name="rentTwoHouse"
+                x-model="rentTwoHouse"
+
                 placeholder="$500"
                 value="{{old('rentTwoHouse')}}"
             />
@@ -164,6 +157,8 @@
                 type="text"
                 class="border border-gray-200 rounded p-2 w-full"
                 name="rentThreeHouse"
+                x-model="rentThreeHouse"
+
                 placeholder="$1100"
                 value="{{old('rentThreeHouse')}}"
             />
@@ -179,6 +174,8 @@
                 type="text"
                 class="border border-gray-200 rounded p-2 w-full"
                 name="rentFourHouse"
+                x-model="rentFourHouse"
+
                 placeholder="$1300"
                 value="{{old('rentFourHouse')}}"
             />
@@ -194,6 +191,8 @@
                 type="text"
                 class="border border-gray-200 rounded p-2 w-full"
                 name="rentHotel"
+                x-model="rentHotel"
+
                 placeholder="$1500"
                 value="{{old('rentHotel')}}"
             />
@@ -209,6 +208,8 @@
                 type="text"
                 class="border border-gray-200 rounded p-2 w-full"
                 name="mortgage"
+                x-model="mortgage"
+
                 placeholder="$175"
                 value="{{old('mortgage')}}"
             />
@@ -224,6 +225,8 @@
                 type="text"
                 class="border border-gray-200 rounded p-2 w-full"
                 name="houseCost"
+                x-model="houseCost"
+
                 placeholder="$200"
                 value="{{old('houseCost')}}"
             />

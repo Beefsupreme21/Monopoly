@@ -12,13 +12,18 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
+        <style>
+            .board-color {
+            background-color: rgb(205, 230, 208);
+        }
+        </style>
         <script src="https://cdn.tailwindcss.com"></script>
         <script src="//unpkg.com/alpinejs" defer></script>
         <title>Monopoly</title>
     </head>
 
     <main>
-        <body>
+        <body class="h-full m-0">
             <div class="bg-slate-700">
                 <div class="flex justify-center">
                     <a href="/"><img src="/images/banner.png" class="object-scale-down h-46 w-96 m-auto p-0" alt=""></a>
@@ -27,8 +32,6 @@
                 <nav class="flex justify-between pb-4">
                     <div class="flex flex-col md:flex-row">
                         <a href="{{ route('properties.index') }}"><span class="font-bold text-lg text-white m-6 hover:underline">Properties</span></a>
-                        <a href="{{ route('properties.create') }}"><span class="font-bold text-lg text-white m-6 hover:underline">Create Properties</span></a>
-
                         <a href="{{ route('chance.index') }}"><span class="font-bold text-lg text-white m-6 hover:underline">Chance</span></a>
                         <a href="{{ route('communityChest.index') }}"><span class="font-bold text-lg text-white m-6 hover:underline">Community Chest</span></a>
                     </div>
@@ -42,11 +45,10 @@
 
             {{$slot}}
         
-            <footer>
-                <div class="bg-slate-700">
-                    <p>Here is the footer</p>
-            </footer>
-
         </body>
+
+        <footer class="bg-slate-700 mt-auto p-5">
+            <h1 class="text-2xl md:text-4xl text-white">Footer</h1>
+        </footer>
     </main>
 </html>
