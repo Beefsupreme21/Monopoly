@@ -5,7 +5,7 @@
             <span x-text="name"></span>
         </div>
         <div class="absolute bottom-4 left-0 right-0 text-center">
-            <div>PRICE <s>M</s><span x-text="cost"></span></div>
+            <div>PRICE <s>M </s><span x-text="cost"></span></div>
         </div>
     </div>
 </div>

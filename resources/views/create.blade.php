@@ -9,9 +9,9 @@
                 <form method="POST" action="/properties" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-4 ">
-                        <p class="text-lg mb-1">Choose Type</p>
                         <div class="p-4">
                             <div class="mb-4">
+                                <p class="text-lg mb-1">Choose Type</p>
                                 <input 
                                     x-on:click="property = true, chance = false, communityChest = false" 
                                     type="radio"

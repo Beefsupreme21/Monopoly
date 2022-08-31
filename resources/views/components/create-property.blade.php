@@ -226,16 +226,8 @@
 
         <div class="mb-6">
             <label for="position" class="inline-block text-lg mb-2">Position</label>
-            <input
-                type="text"
-                class="border border-gray-200 rounded p-2 w-full"
-                name="position"
-                placeholder="idk yet"
-                value="{{old('position')}}"
-            />
 
             <x-board-preview />   
-
 
             @error('position')
                 <p class="text-red-500 text-xs mt-1">{{$message}}</p>
