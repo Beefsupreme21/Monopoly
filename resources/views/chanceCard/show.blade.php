@@ -8,7 +8,7 @@
         <x-chance-card :chanceCard='$chanceCard' />   
     </div>
 
-    <div class="mt-4 p-2 flex space-x-16 justify-center">
+    <div class="mt-4 p-12 flex space-x-16 justify-center">
         <a href="/chance/{{$chanceCard->id}}/edit">
             <i class="fa-solid fa-pencil"></i> Edit
         </a>

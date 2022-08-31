@@ -38,7 +38,7 @@
 
                     <div class="flex flex-col justify-around md:flex-row items-end">
                         <a href="/create"><span class="bg-amber-700 hover:bg-blue-700 text-white font-bold my-2 mx-4 py-2 px-4 rounded-full hover:underline">Create new piece</span></a>
-                        <a href="#"><span class="bg-blue-500 hover:bg-blue-700 self-end text-white font-bold mx-4 py-2 px-4 rounded-full hover:underline">Play Now!</span></a>    
+                        <a href="/board"><span class="bg-blue-500 hover:bg-blue-700 self-end text-white font-bold mx-4 py-2 px-4 rounded-full hover:underline">Play Now!</span></a>    
                     </div>
                 </nav>
             </div>
@@ -47,8 +47,10 @@
         
         </body>
 
-        <footer class="bg-slate-700 mt-auto p-5">
-            <h1 class="text-2xl md:text-4xl text-white">Footer</h1>
-        </footer>
+
+
     </main>
+    <footer class="bg-slate-700 mt-24 p-16">
+        <h1 class="text-2xl md:text-4xl text-white">Footer</h1>
+    </footer>
 </html>

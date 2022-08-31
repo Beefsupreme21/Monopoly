@@ -1,6 +1,6 @@
 <x-layout>
     <div class="flex justify-center" x-data="{ name: '', cost: '', rent: '', rentOneHouse: '', rentTwoHouse: '', rentThreeHouse: '', rentFourHouse: '', rentHotel: '', mortgage: '', houseCost: '', property: true, chance:false, communityChest:false }">
-        <div class="md:flex">
+        <div class="md:flex lg:space-x-12 pb-6">
             <div class="bg-gray-50 border border-gray-200 p-8 rounded mt-24 min-w-476">
                 <header class="text-center">
                     <h2 class="text-2xl font-bold uppercase mb-1">Add a new Piece</h2>
