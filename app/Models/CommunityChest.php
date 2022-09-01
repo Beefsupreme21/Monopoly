@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class CommunityChest extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'message',
+        'image',
+        'amount',
+        'canHold',
+        'goToProperty',
+    ];
 }

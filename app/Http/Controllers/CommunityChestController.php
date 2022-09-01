@@ -10,80 +10,72 @@ use App\Http\Requests\UpdateCommunityChestRequest;
 
 class CommunityChestController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index(CommunityChest $communityChest)
     {   
         return view('communityChest.index', [
-            'communityChest' => $communityChest->all()
+            'communityChestCards' => $communityChest->all()
         ]);
     }
 
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+    public function show($id) {   
+        $communityChestCards = CommunityChest::findOrFail($id);
+    
+        return view('communityChest.show', [
+            'communityChestCards' => $communityChestCards
+        ]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreCommunityChestRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StoreCommunityChestRequest $request)
-    {
-        //
+    public function create() {
+        return view('communityChest.create');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\CommunityChest  $communityChest
-     * @return \Illuminate\Http\Response
-     */
-    public function show(CommunityChest $communityChest)
-    {
-        //
+
+    public function store(Request $request) {
+        $formFields = $request->validate([
+            'version' => 'required',
+            'image' => 'required',
+            'message',
+            'amount',
+            'canHold' => 'required',
+            'goToProperty',
+        ]);
+
+        if($request->hasFile('image')) {
+            $formFields['image'] = $request->file('image')->store('images', 'public');
+        }
+
+        CommunityChest::create($formFields);
+
+        return redirect('/')->with('message', 'Created successfully!');
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\CommunityChest  $communityChest
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(CommunityChest $communityChest)
+
+    public function edit($id)
     {
-        //
+        $communityChestCards = CommunityChest::findOrFail($id);
+
+        return view('communityChest.edit', [
+            'communityChestCards' => $communityChestCards
+        ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateCommunityChestRequest  $request
-     * @param  \App\Models\CommunityChest  $communityChest
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdateCommunityChestRequest $request, CommunityChest $communityChest)
+    public function update(Request $request, CommunityChest $communityChestCards)
     {
-        //
+        $formFields = $request->validate([
+            'version' => 'required',
+            'image',
+            'message',
+            'amount',
+            'canHold' => 'required',
+            'goToProperty',
+        ]);
+
+        $communityChestCards->update($formFields);
+
+        return redirect('/')->with('message', 'Updated successfully!');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\CommunityChest  $communityChest
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(CommunityChest $communityChest)
     {
         //
