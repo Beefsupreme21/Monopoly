@@ -1,15 +1,23 @@
 <x-layout>
 
-    {{-- <div class="bg-white w-full flex flex-col md:flex-row">
-        <main class="bg-sky-300 md:w-2/3 lg:w-3/4 m-5 p-80">
-            <h1 class="text-2xl md:text-4xl">Main Content</h1>
+    <div class="bg-gray-300 justify-center w-full flex flex-col lg:space-x-12 lg:flex-row p-24">
+        <main>
+            <img class="md:h-[600px] lg:h-[800px]w-[800px]" src="{{asset('images/monopoly-board.jpg')}}">
         </main>
-        <aside class="bg-green-300 mx-5 mb-5 md:w-1/3 lg:w-1/4 mt-5 p-40">
-            <h1 class="text-2xl md:text-4xl">Sidebar</h1>
+        <aside class="bg-white p-12">
+            <h1 class="text-2xl pb-6 md:text-4xl">Create your own monopoly pieces</h1>
+            <div>
+                <p>This is a website to help create new monopoly pieces</p>
+                <ul>
+                    <li>
+                        <p>Create new Properties</p>
+                        <p>Create new Chance Cards</p>
+                        <p>Create new Community Chest Cards</p>
+                    </li>
+                </ul>
+            </div>
+
         </aside>
-    </div> --}}
-
-    <x-board-preview />   
-
+    </div>
 
 </x-layout>

@@ -38,15 +38,15 @@
     
                             <div>
                                 <div x-show="property" x-cloak>
-                                    <x-create-property />   
+                                    <x-CreateForm.create-property />   
                                 </div>
                         
                                 <div x-show="chance" x-cloak>
-                                    <x-create-chance />   
+                                    <x-CreateForm.create-chance />   
                                 </div>
                         
                                 <div x-show="communityChest" x-cloak>
-                                    <x-create-communityChest />   
+                                    <x-CreateForm.create-communityChest />   
                                 </div>
                             </div>
                         </div>
@@ -63,16 +63,16 @@
     
             <div class="px-6 rounded max-w-lg mx-auto mt-24 relative">
                 <div class="sticky top-5" x-show="property" x-cloak>
-                    <x-property-card-preview />   
-                    <x-property-board-preview />   
+                    <x-CreateForm.property-card-preview />   
+                    <x-CreateForm.property-board-preview />   
                 </div>
         
-                <div x-show="chance" x-cloak>
+                <div class="border border-gray-200 rounded p-6" x-show="chance" x-cloak >
                     <img src="{{asset('images/Advance_To_Boardwalk.webp')}}">
                 </div>
         
-                <div x-show="communityChest" x-cloak>
-                    <img src="{{asset('images/Advance_To_Boardwalk.webp')}}">
+                <div class="border border-gray-200 rounded p-6" x-show="communityChest" x-cloak>
+                    <img src="{{asset('images/CC_Advance_to_Go.webp')}}">
                 </div>
             </div>
         </div>
