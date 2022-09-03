@@ -24,29 +24,4 @@
             </div>
         </aside>
     </div>
-
-
-    <div x-data="{ darkBlue: true, yellow: false, red: false, lightBlue: false, darkPurple: false, purple: false, purple: false, orange: false, green: false }"> 
-
-        <button x-on:click="darkBlue = true, yellow = false, red = false, lightBlue = false, darkPurple = false, purple = false, orange = false, green = false">Blue</button>
-        
-        <button x-on:click="darkBlue = false, yellow = true, red = false, lightBlue = false, darkPurple = false, purple = false, orange = false, green = false">yellow</button>
-        
-        <button x-on:click="darkBlue = false, yellow = false, red = true, lightBlue = false, darkPurple = false, purple = false, orange = false, green = false">Red</button>
-
-        <button x-on:click="darkBlue = false, yellow = false, red = false, lightBlue = true, darkPurple = false, purple = false, orange = false, green = false">Cyan</button>
-
-        <button x-on:click="darkBlue = false, yellow = false, red = false, lightBlue = false, darkPurple = true, purple = false, orange = false, green = false">Purple</button>
-
-        <button x-on:click="darkBlue = false, yellow = false, red = false, lightBlue = false, darkPurple = false, purple = true, orange = false, green = false">Purple</button>
-
-        <button x-on:click="darkBlue = false, yellow = false, red = false, lightBlue = false, darkPurple = false, purple = false, orange = true, green = false">Orange</button>
-
-        <button x-on:click="darkBlue = false, yellow = false, red = false, lightBlue = false, darkPurple = false, purple = false, orange = false, green = true">Green</button>
-
-        <div x-bind:class="{ 'dark-blue': darkBlue, 'yellow': yellow, 'red': red, 'light-blue': lightBlue, 'dark-purple': darkPurple, 'purple': purple, 'orange': orange, 'green': green }">@class</div> 
-
-    </div>
-
-
 </x-layout>
