@@ -55,30 +55,30 @@
         <p class="mb-2">Choose Color</p>
         <div class="flex justify-evenly">
             <div class="mb-6 flex-column">
-                <input type="radio" id="purple" name="color" value="purple">
+                <input type="radio" id="purple" name="color" value="purple" x-on:click="darkBlue = false, yellow = false, red = false, lightBlue = false, darkPurple = true, purple = false, orange = false, green = false">
                 <label for="purple">Purple</label><br>
 
-                <input type="radio" id="lightBlue" name="color" value="cyan">
+                <input type="radio" id="lightBlue" name="color" value="cyan" x-on:click="darkBlue = false, yellow = false, red = false, lightBlue = true, darkPurple = false, purple = false, orange = false, green = false">
                 <label for="lightBlue">Light Blue</label><br>
 
-                <input type="radio" id="pink" name="color" value="pink">
+                <input type="radio" id="pink" name="color" value="pink" x-on:click="darkBlue = false, yellow = false, red = false, lightBlue = false, darkPurple = false, purple = true, orange = false, green = false">
                 <label for="pink">Pink</label><br>
 
-                <input type="radio" id="orange" name="color" value="orange">
+                <input type="radio" id="orange" name="color" value="orange" x-on:click="darkBlue = false, yellow = false, red = false, lightBlue = false, darkPurple = false, purple = false, orange = true, green = false">
                 <label for="orange">Orange</label><br>
             </div>
 
             <div class="mb-6 flex-column">
-                <input type="radio" id="red" name="color" value="red">
+                <input type="radio" id="red" name="color" value="red" x-on:click="darkBlue = false, yellow = false, red = true, lightBlue = false, darkPurple = false, purple = false, orange = false, green = false">
                 <label for="red">Red</label><br>
 
-                <input type="radio" id="yellow" name="color" value="yellow">
+                <input type="radio" id="yellow" name="color" value="yellow" x-on:click="darkBlue = false, yellow = true, red = false, lightBlue = false, darkPurple = false, purple = false, orange = false, green = false">
                 <label for="yellow">Yellow</label><br>
 
-                <input type="radio" id="green" name="color" value="green">
+                <input type="radio" id="green" name="color" value="green" x-on:click="darkBlue = false, yellow = false, red = false, lightBlue = false, darkPurple = false, purple = false, orange = false, green = true">
                 <label for="green">Green</label><br>
 
-                <input type="radio" id="blue" name="color" value="blue">
+                <input type="radio" id="blue" name="color" value="blue" x-on:click="darkBlue = true, yellow = false, red = false, lightBlue = false, darkPurple = false, purple = false, orange = false, green = false">
                 <label for="blue">Blue</label><br>
             </div>
         </div>

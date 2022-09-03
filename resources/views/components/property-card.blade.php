@@ -1,10 +1,10 @@
 @props(['property'])
 
 <div class="border border-gray-200 rounded p-6">
-    <div class="border-2 border-black m-auto w-[320px] h-[385px]">
-        <div class="border-2 border-black bg-{{$property->color}}-600 text-center text-white m-2 p-2">
+    <div class="border-2 border-black m-auto w-[320px] h-[400px]">
+        <div class="border-2 border-black bg-{{$property->color}}-600 text-center text-white m-2 p-2 font-bold">
             <p>TITLE DEED</p>
-            <h2>{{$property->name}}</h2>
+            <span class="text-lg uppercase">{{$property->name}}</span>
         </div>
         <div class="m-2">
             <div class="text-center">

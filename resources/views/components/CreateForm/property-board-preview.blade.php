@@ -1,5 +1,6 @@
 <div class="mt-12 border-2 border-black w-[160px] h-[260px] relative board-color mx-auto">
-    <div class="border-b-2 border-black bg-red-600 text-center text-white h-[45px]"></div>
+    <div x-bind:class="{ 'dark-blue': darkBlue, 'yellow': yellow, 'red': red, 'light-blue': lightBlue, 'dark-purple': darkPurple, 'purple': purple, 'orange': orange, 'green': green }"
+    class="border-b-2 border-black text-center text-white h-[45px]"></div>
     <div class="flex-col justify-between text-center items-center">
         <div class="pt-4">
             <span x-text="name"></span>

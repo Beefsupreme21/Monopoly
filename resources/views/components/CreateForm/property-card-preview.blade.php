@@ -1,8 +1,9 @@
 <div class="border border-gray-200 rounded p-6">
-    <div class="border-2 border-black w-[320px] h-[385px]">
-        <div class="border-2 border-black bg-red-600 text-center text-white m-2 p-2">
+    <div class="border-2 border-black w-[320px] h-[400px]">
+        <div x-bind:class="{ 'dark-blue': darkBlue, 'yellow': yellow, 'red': red, 'light-blue': lightBlue, 'dark-purple': darkPurple, 'purple': purple, 'orange': orange, 'green': green }" 
+        class="border-2 border-black text-center m-2 p-1 font-bold">
             <p>TITLE DEED</p>
-            <h2><span x-text="name"></span></h2>
+            <span class="text-lg uppercase" x-text="name"></span>
         </div>
         <div class="m-2">
             <div class="text-center">
