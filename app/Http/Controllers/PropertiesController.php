@@ -33,7 +33,6 @@ class PropertiesController extends Controller
     public function store(Request $request) {
         $formFields = $request->validate([
             'version' => 'required',
-            'type' => 'required',
             'name' => 'required',
             'cost' => 'required',
             'color' => 'required',
@@ -50,13 +49,12 @@ class PropertiesController extends Controller
 
         Properties::create($formFields);
 
-        return redirect('/')->with('message', 'Created successfully!');
+        return redirect('/properties')->with('message', 'Created successfully!');
     }
 
     public function update(Request $request, Properties $property) {
         $formFields = $request->validate([
             'version' => 'required',
-            'type' => 'required',
             'name' => 'required',
             'cost' => 'required',
             'color' => 'required',
@@ -74,7 +72,7 @@ class PropertiesController extends Controller
         $property->update($formFields);
 
 
-        return redirect('/')->with('message', 'Updated successfully!');
+        return redirect('/properties')->with('message', 'Updated successfully!');
     }
 
     public function edit(Properties $property) {
@@ -83,7 +81,7 @@ class PropertiesController extends Controller
 
     public function destroy(Properties $property) {
         $property->delete();
-        return redirect('/')->with('message', 'Deleted successfully');
+        return redirect('/properties')->with('message', 'Deleted successfully');
     }
 
 }

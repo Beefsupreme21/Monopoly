@@ -19,10 +19,10 @@ class CommunityChestController extends Controller
     }
 
     public function show($id) {   
-        $communityChestCards = CommunityChest::findOrFail($id);
+        $communityChestCard = CommunityChest::findOrFail($id);
     
         return view('communityChest.show', [
-            'communityChestCards' => $communityChestCards
+            'communityChestCard' => $communityChestCard
         ]);
     }
 
@@ -73,11 +73,13 @@ class CommunityChestController extends Controller
 
         $communityChestCards->update($formFields);
 
-        return redirect('/')->with('message', 'Updated successfully!');
+        return redirect('/communityChest')->with('message', 'Updated successfully!');
     }
 
     public function destroy(CommunityChest $communityChest)
     {
-        //
+        $communityChest->delete();
+        return redirect('/communityChest')->with('message', 'Deleted successfully');
     }
+
 }

@@ -11,7 +11,7 @@ class Properties extends Model
 
     protected $fillable = [
         'version',
-        'type',
+        // 'type',
         'name',
         'cost',
         'color',

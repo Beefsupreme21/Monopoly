@@ -17,6 +17,7 @@ class ChanceCardController extends Controller
         ]);
     }
 
+
     public function show($id) {   
         $chanceCard = ChanceCard::findOrFail($id);
     
