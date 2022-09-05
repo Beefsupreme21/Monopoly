@@ -77,4 +77,12 @@
             <p class="text-red-500 text-xs mt-1">{{$message}}</p>
         @enderror
     </div>
+
+    <div class="mb-6">
+        <button class="bg-laravel text-white rounded py-2 px-4 bg-black">
+            Create Card!
+        </button>
+
+        <a href="/" class="text-black ml-4"> Back </a>
+    </div>
 </form>

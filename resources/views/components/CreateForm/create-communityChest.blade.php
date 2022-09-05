@@ -1,4 +1,4 @@
-<form method="POST" action="/chance" enctype="multipart/form-data">
+<form method="POST" action="/communityChest" enctype="multipart/form-data">
     @csrf
     <div class="mb-4">
         <p class="text-lg mb-1">Version of Monopoly</p>
@@ -76,5 +76,13 @@
         @error('goToProperty')
             <p class="text-red-500 text-xs mt-1">{{$message}}</p>
         @enderror
+    </div>
+
+    <div class="mb-6">
+        <button class="bg-laravel text-white rounded py-2 px-4 bg-black">
+            Create Card!
+        </button>
+
+        <a href="/" class="text-black ml-4"> Back </a>
     </div>
 </form>

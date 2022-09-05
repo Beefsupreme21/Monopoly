@@ -6,11 +6,11 @@
         }
     </style>
 
-    <div class="bg-gray-300 justify-center w-full flex flex-col lg:space-x-12 lg:flex-row p-24">
+    <div class="justify-center w-full flex flex-col md:p-12 lg:space-x-12 lg:flex-row lg:p-20">
         <main>
-            <img class="md:h-[600px] lg:h-[800px]w-[800px]" src="{{asset('images/monopoly-board.jpg')}}">
+            <img class="lg:h-[800px]min-w-[800px]" src="{{asset('images/monopoly-board.jpg')}}">
         </main>
-        <aside class="bg-white p-12">
+        <aside class="bg-white p-6 mt-6 lg:mt-0">
             <h1 class="text-2xl pb-6 md:text-4xl">Create your own monopoly pieces</h1>
             <div>
                 <p>This is a website to help create new monopoly pieces</p>
@@ -24,4 +24,7 @@
             </div>
         </aside>
     </div>
+
+    <x-CreateForm.create-property />   
+
 </x-layout>

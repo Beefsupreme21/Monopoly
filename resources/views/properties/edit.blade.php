@@ -15,7 +15,7 @@
                         class="border border-gray-200 rounded p-2 w-full"
                         name="version"
                         placeholder="Park Place"
-                        value="{{old('version')}}"
+                        value="{{$property->version}}"
                     />
     
                     @error('version')
@@ -30,7 +30,7 @@
                         class="border border-gray-200 rounded p-2 w-full"
                         name="type"
                         placeholder="Park Place"
-                        value="{{old('type')}}"
+                        value="{{$property->type}}"
                     />
     
                     @error('type')
@@ -71,24 +71,24 @@
                     <p class="mb-2">Choose Color</p>
                     <div class="flex justify-evenly">
                         <div class="mb-6 flex-column">
-                            <input type="radio" id="purple" name="color" value="purple">
+                            <input type="radio" id="purple" name="color" value="purple" {{ $property->color == 'purple' ? 'checked' : '' }} >
                             <label for="purple">Purple</label><br>
-                            <input type="radio" id="lightBlue" name="color" value="cyan">
+                            <input type="radio" id="lightBlue" name="color" value="cyan" {{ $property->color == 'cyan' ? 'checked' : '' }}>
                             <label for="lightBlue">Light Blue</label><br>
-                            <input type="radio" id="pink" name="color" value="pink">
+                            <input type="radio" id="pink" name="color" value="pink" {{ $property->color == 'pink' ? 'checked' : '' }}>
                             <label for="pink">Pink</label><br>
-                            <input type="radio" id="orange" name="color" value="orange">
+                            <input type="radio" id="orange" name="color" value="orange" {{ $property->color == 'orange' ? 'checked' : '' }}>
                             <label for="orange">Orange</label><br>
                         </div>
             
                         <div class="mb-6 flex-column">
-                            <input type="radio" id="red" name="color" value="red">
+                            <input type="radio" id="red" name="color" value="red" {{ $property->color == 'red' ? 'checked' : '' }}>
                             <label for="red">Red</label><br>
-                            <input type="radio" id="yellow" name="color" value="yellow">
+                            <input type="radio" id="yellow" name="color" value="yellow" {{ $property->color == 'yellow' ? 'checked' : '' }}>
                             <label for="yellow">Yellow</label><br>
-                            <input type="radio" id="green" name="color" value="green">
+                            <input type="radio" id="green" name="color" value="green" {{ $property->color == 'green' ? 'checked' : '' }}>
                             <label for="green">Green</label><br>
-                            <input type="radio" id="blue" name="color" value="blue">
+                            <input type="radio" id="blue" name="color" value="blue" {{ $property->color == 'blue' ? 'checked' : '' }}>
                             <label for="blue">Blue</label><br>
                         </div>
                     </div>

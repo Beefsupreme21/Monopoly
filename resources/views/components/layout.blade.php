@@ -16,7 +16,7 @@
         <script src="https://kit.fontawesome.com/19ab508515.js" crossorigin="anonymous"></script>
 
         <style>
-            .footer {
+            .futura {
                 font-family: 'Futura Bold font';
                 src: url('/public/fonts/Futura Bold font.ttf');
             }
@@ -26,7 +26,7 @@
             }
 
             .dark-purple {
-                background-color: #5a6dba;
+                background-color: #5e3577;
                 color: white;            
             }
             .light-blue {
@@ -59,7 +59,7 @@
 
     <main>
         <body>
-            <div class="bg-slate-800 footer">
+            <div class="bg-slate-800 futura">
                 <div class="flex justify-center">
                     <a href="/"><img src="/images/banner.png" class="object-scale-down h-46 w-96 m-auto p-0" alt=""></a>
                 </div>
@@ -96,11 +96,11 @@
 
         </body>
 
-        <footer class="bg-slate-800 py-10 text-white uppercase footer">
+        <footer class="bg-slate-800 py-8 text-white uppercase futura">
             <div class="flex justify-evenly m-auto md:block md:w-11/12 lg:w-5/6 xl:w-3/4">
                 <div class="block  md:flex md:justify-between">
                     <div class="pb-8 md:p-0 my-auto">
-                        <p class="mb-2">Sign up for the newsletter</p>
+                        <p class="mb-2">Sign up for our newsletter</p>
                         <div class=" border-2 border-gray-500 px-3">
                             <input type="text" class="bg-slate-800 w-48 h-10 focus:outline-none" placeholder="Email Address">
                             <button><i class="fa-solid fa-chevron-right fa-2x align-middle"></i></button>
@@ -108,8 +108,8 @@
 
                     </div>
     
-                    <div class="my-auto">
-                        <p class="mb-2">Follow Us</p>
+                    <div class="my-auto pl-16 md:pl-0">
+                        <p class="mb-2 pl-3">Follow Us</p>
                         <div class="flex">
                             <a href="#" class="pr-2 fa-brands fa-twitter fa-2x hover:text-gray-500"></a>
                             <a href="#" class="pr-2 fa-brands fa-github fa-2x hover:text-gray-500"></a>
@@ -119,27 +119,23 @@
 
                     <div class="hidden md:block">
                         <a href="/"><p class="hover:underline">HOME</p></a>
-                        <p class="hover:underline">Properties</p>
-                        <p class="hover:underline">Chance</p>
-                        <p class="hover:underline">Community Chest</p>
-                        <p class="hover:underline">Create new piece</p>
-                        <p class="hover:underline">Play Now!</p>
+                        <a href="{{ route('properties.index') }}"><p class="hover:underline">Properties</p></a>
+                        <a href="{{ route('chance.index') }}"><p class="hover:underline">Chance</p></a>
+                        <a href="{{ route('communityChest.index') }}"><p class="hover:underline">Community Chest</p></a>
+                        <a href="/create"><p class="hover:underline">Create new piece</p></a>
+                        <a href="/board"><p class="hover:underline">Play Now!</p></a>
                     </div>
                 </div>
     
                 <div class="my-auto md:hidden">
-                    <p class="hover:underline">HOME</p>
-                    <p class="hover:underline">Properties</p>
-                    <p class="hover:underline">Chance</p>
-                    <p class="hover:underline">Community Chest</p>
-                    <p class="hover:underline">Create new piece</p>
-                    <p class="hover:underline">Play Now!</p>
+                    <a href="/"><p class="hover:underline">HOME</p></a>
+                    <a href="{{ route('properties.index') }}"><p class="hover:underline">Properties</p></a>
+                    <a href="{{ route('chance.index') }}"><p class="hover:underline">Chance</p></a>
+                    <a href="{{ route('communityChest.index') }}"><p class="hover:underline">Community Chest</p></a>
+                    <a href="/create"><p class="hover:underline">Create new piece</p></a>
+                    <a href="/board"><p class="hover:underline">Play Now!</p></a>
                 </div>
             </div>
-
-
-
-
         </footer>
 
     </main>

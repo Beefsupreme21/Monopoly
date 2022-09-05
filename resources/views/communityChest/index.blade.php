@@ -1,4 +1,6 @@
 <x-layout>
+    @include('partials.property-search')
+
     <div class="flex flex-wrap">
         @foreach ($communityChestCards as $communityChestCard)
             <a href="{{ route('communityChest.show', ['communityChest' => $communityChestCard->id]) }}">
