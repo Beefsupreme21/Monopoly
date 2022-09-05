@@ -2,7 +2,7 @@
     <div class="flex justify-center" x-data="{ 
         name: '', cost: '', rent: '', rentOneHouse: '', rentTwoHouse: '', rentThreeHouse: '', rentFourHouse: '', rentHotel: '', mortgage: '', houseCost: '', 
         property: true, chance:false, communityChest:false, 
-        darkBlue: false, yellow: false, red: false, lightBlue: false, darkPurple: false, purple: false, purple: false, orange: true, green: false 
+        darkBlue: false, yellow: false, red: false, lightBlue: false, darkPurple: true, purple: false, purple: false, orange: false, green: false 
     }">
         <div class="md:flex pb-6">
             <div class="bg-gray-50 border border-gray-200 p-8 md:mr-8 rounded mt-24 min-w-screen-md">

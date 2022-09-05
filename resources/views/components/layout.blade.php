@@ -20,11 +20,9 @@
                 font-family: 'Futura Bold font';
                 src: url('/public/fonts/Futura Bold font.ttf');
             }
-
             .board-color {
                 background-color: rgb(205, 230, 208);
             }
-
             .dark-purple {
                 background-color: #5e3577;
                 color: white;            
@@ -42,7 +40,7 @@
                 background-color: #f50c2b;
             }
             .yellow {
-                background-color: #ffed20;
+                background-color: #f5f500;
             }
             .green {
                 background-color: #41994e;
@@ -137,6 +135,7 @@
                 </div>
             </div>
         </footer>
+        <x-flash-message />
 
     </main>
 

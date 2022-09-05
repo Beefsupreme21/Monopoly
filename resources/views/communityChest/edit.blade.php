@@ -5,7 +5,7 @@
                 <h2 class="text-2xl font-bold uppercase mb-1">Edit Chance Card</h2>
             </header>
     
-            <form method="POST" action="/chance/{{$chanceCard->id}}" enctype="multipart/form-data">
+            <form method="POST" action="/communityChest/{{$communityChestCards->id}}" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
                 <div class="mb-6">
@@ -59,7 +59,7 @@
                         class="border border-gray-200 rounded p-2 w-full"
                         name="amount"
                         placeholder="$50 or -$75"
-                        value="{{$chanceCard->amount}}"
+                        value="{{$communityChestCards->amount}}"
                     />
     
                     @error('amount')
@@ -90,7 +90,7 @@
                         class="border border-gray-200 rounded p-2 w-full"
                         name="goToProperty"
                         placeholder="$35"
-                        value="{{$chanceCard->goToProperty}}"
+                        value="{{$communityChestCards->goToProperty}}"
                     />
     
                     @error('goToProperty')
@@ -110,7 +110,7 @@
 
         <div class="m-auto">
             <div class="m-auto">
-                <img src="{{asset('storage/' . $chanceCard->image)}}" alt="">
+                <img src="{{asset('storage/' . $communityChestCards->image)}}" alt="">
             </div>
         </div>
     </div>
