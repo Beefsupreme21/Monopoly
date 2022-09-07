@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('version')->nullable();
             $table->string('message')->nullable();
             $table->string('image');
-            $table->string('amount');
+            $table->string('amount')->nullable();
             $table->string('canHold');
             $table->string('goToProperty')->nullable();
             $table->timestamps();
