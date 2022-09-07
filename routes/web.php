@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Properties;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ChanceCardController;
 use App\Http\Controllers\PropertiesController;
@@ -24,6 +25,12 @@ Route::get('/', function(){
 
 Route::get('/create', function(){
     return view('create');
+});
+
+Route::get('board', function (Properties $properties) {
+    return view('board', [
+        'properties' => $properties
+    ]);
 });
 
 Route::resources([
